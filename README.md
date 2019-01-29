@@ -1,95 +1,34 @@
-# Supply chain & data auditing
-
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
-
+### Contracts deploy
 ```
-Give examples (to be clarified)
-```
+Compiling ./contracts/coffeebase/SupplyChain.sol...
+Writing artifacts to ./build/contracts
 
-### Installing
+Using network 'rinkeby'.
 
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
+Running migration: 2_deploy_contracts.js
+  Deploying FarmerRole...
+  ... 0x2dd955d6c0cfe5caf0dadf2f63751b89e736e4de5927f91da8e064f582aad0fc
+  FarmerRole: 0xfa1bd02c92500af8d2d1ae237c08290afb94a79a
+  Deploying DistributorRole...
+  ... 0x027623a8bd80903564b2b2804c502dca6eaa0ef4fad215beb6a100ca58f01608
+  DistributorRole: 0xff15abeb5c649dea727c145f7b37db92bfa022f3
+  Deploying RetailerRole...
+  ... 0xd28e28e75323fec6e3d3fbd135e5826ab03b09ef4efe28e7d7628f9d3a575db8
+  RetailerRole: 0xadf32d21dc3ea9ac5530982c29b41561dc3e8540
+  Deploying ConsumerRole...
+  ... 0x628e3c249cb203a63fb2097e38014b6c2a2ed3650ea967370a6e34f8dc928c2a
+  ConsumerRole: 0xe9f73b41ef8350103e20119d88dc6b6ad4622e1c
+  Deploying SupplyChain...
+  ... 0xf6291713cdf0e2ef5aa002b79b41040bbfd1f807a2a82547a33fc380e00120fc
+  SupplyChain: 0x86ab7f1576d7eda6e522b5fd6bad1fc513ebe287
+Saving successful migration to network...
+  ... 0xb43a7473446eeb6e69297e24c87e509b3c6f778a7b854dee822d264e2152b590
+Saving artifacts...
 ```
 
-Launch Ganache:
 
-```
-ganache-cli
-```
+### General steps
 
-Your terminal should look something like this:
+The Dapp frontend provides the access to Smart contracts capabilities through Metamask.
 
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
-
-
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
-
-## Acknowledgments
-
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+The user can query and manipulate the Beans process through the interface in order to roll out every piece of the process
